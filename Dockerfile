@@ -66,7 +66,7 @@ RUN set -ex; \
     } > $PHP_INI_DIR/conf.d/phpmyadmin-misc.ini
 
 # Copy main script
-COPY docker-entrypoint.sh /usr/local/bin/
+COPY docker-entrypoint.sh /var/www/
 
-ENTRYPOINT ["docker-entrypoint.sh"]
+ENTRYPOINT ["/var/www/docker-entrypoint.sh"]
 CMD ["php-fpm"]
