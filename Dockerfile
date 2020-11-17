@@ -3,7 +3,7 @@ FROM php:7.3-fpm-alpine
 # install the PHP extensions we need
 # postgresql-dev is needed for https://bugs.alpinelinux.org/issues/3642
 RUN set -eux; \
-	sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories; \
+	#sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories; \
 	apk add --no-cache --virtual .build-deps \
 		coreutils \
 		freetype-dev \
