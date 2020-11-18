@@ -63,10 +63,10 @@ RUN set -ex; \
         echo 'allow_url_fopen = Off'; \
         echo 'max_execution_time = 600'; \
         echo 'memory_limit = 512M'; \
-    } > $PHP_INI_DIR/conf.d/phpmyadmin-misc.ini
+    } > $PHP_INI_DIR/conf.d/my-misc.ini
 
 # Copy main script
-COPY docker-entrypoint.sh /var/www/
+COPY docker-entrypoint.sh /
 
-ENTRYPOINT ["/var/www/docker-entrypoint.sh"]
+ENTRYPOINT ["/docker-entrypoint.sh"]
 CMD ["php-fpm"]
