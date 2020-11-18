@@ -20,7 +20,6 @@ RUN set -eux; \
     \
     docker-php-ext-configure gd --with-freetype-dir=/usr --with-jpeg-dir=/usr --with-png-dir=/usr; \
     docker-php-ext-install -j "$(nproc)" \
-        bz2 \
         gd \
         opcache \
         mysqli \
