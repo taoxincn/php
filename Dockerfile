@@ -11,15 +11,11 @@ RUN apk add --no-cache \
 RUN set -eux; \
     # sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories; \
     apk add --no-cache --virtual .build-deps \
-        coreutils \
         freetype-dev \
         libjpeg-turbo-dev \
         libpng-dev \
         libzip-dev \
         postgresql-dev \
-        bzip2-dev \
-        libwebp-dev \
-        libxpm-dev \
     ; \
     \
     docker-php-ext-configure gd --with-freetype --with-jpeg --with-webp --with-xpm; \
