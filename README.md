@@ -1,4 +1,5 @@
-# php 7.4-fpm
+# php 7.3-fpm
+
 ## 使用方法
 `podman run -d --name css.keruix.com -v /var/www/html:/data/www/css.keruix.com --ip 10.88.1.1 taoxin/php`
 
