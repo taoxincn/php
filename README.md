@@ -15,10 +15,8 @@ css.keruix.com {
         root /var/www/html/public/
     }
     file_server
-    @admin path_regexp admin /admin.php/(.*)$
-    rewrite @admin /admin.php?s={re.admin.1}
-    @index path_regexp index /index.php/(.*)$
-    rewrite @index /index.php?s={re.index.1}
+    @index path_regexp index /(index|admin).php/(.*)$
+    rewrite @index /{re.index.1}.php?{query}&s={re.index.2}
     try_files {path} /index.php?{query}&s={path}
 }
 ```
